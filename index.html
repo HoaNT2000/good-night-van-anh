@@ -1,0 +1,167 @@
+<html>
+  <meta charset="UTF-8" /><meta
+    content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5"
+    name="viewport"
+  /><meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="Website untuk gans" name="description" />
+  <meta content="lewin" name="author" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+  <script
+    src="https://kit.fontawesome.com/4f3ce16e3e.js"
+    crossorigin="anonymous"
+  ></script>
+  <link
+    href="https://feeldreams.github.io/night/style.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+
+  <head>
+    <title>Chúc Vân Anh ngủ ngon </title>
+  </head>
+  <body>
+    <audio
+      src="https://feeldreams.github.io/fullsenyum.mp3"
+      id="linkmp3"
+      class="sembunyi"
+    ></audio>
+
+    <div id="bodyblur">
+      <img src="https://feeldreams.github.io/nightin.jpeg" id="wallpaper" />
+      <div id="beneranblur"></div>
+    </div>
+
+    <div id="Content">
+      <div id="suratin" onClick="memulai();">
+        <img src="https://feeldreams.github.io/kadoin.png" />
+      </div>
+      <p id="ket">Vân Anh hãy nhấn vào món quà nào!</p>
+
+      <div class="kumpulanstiker">
+        <!-- Stiker untuk Konten -->
+        <img src="https://feeldreams.github.io/pusn.gif" id="stiker1" />
+        <img src="https://feeldreams.github.io/bunga.gif" id="stiker2" />
+        <img src="https://feeldreams.github.io/mndkat.gif" id="stiker3" />
+        <img src="https://feeldreams.github.io/smprt.gif" id="stiker4" />
+        <img src="https://feeldreams.github.io/ngumpet.gif" id="stiker5" />
+
+        <img src="https://feeldreams.github.io/bunga.gif" id="stiker" />
+      </div>
+      <p id="halo">Good Night 😇 !</p>
+
+      <script class="sembunyi">
+        async function pesanAwal() {
+          suratin.style = "display:none";
+          ket.style = "display:none";
+          await swalst.fire({
+            title: "Hi Vân Anh, ",
+            imageUrl: "" + stiker1.src,
+          });
+          await swalst.fire({
+            title: "Tớ có lời muốn nói, Đó là.. 😍",
+            imageUrl: "" + stiker2.src,
+          });
+          await swalst.fire({
+            title: "Chúc cậu ngủ ngon! 🤭",
+            imageUrl: "" + stiker3.src,
+          });
+          await swalst.fire({
+            title: "Nếu cậu không ngủ sớm 😡",
+            imageUrl: "" + stiker4.src,
+          });
+          await swalst.fire({
+            title: "Sẽ không tốt cho sức khoẻ và tớ sẽ rất lo đó 🥺",
+            imageUrl: "" + stiker5.src,
+          });
+          mulaikonten();
+        }
+      </script>
+      <div>
+        <blockquote id="bq">
+          <!-- Konten Pembukaan -->
+          <p id="kalimat">Tớ chỉ muốn nói..🤭</p>
+          <p id="kalimat2">
+            Chúc cậu ngủ ngon và có một giấc mơ đẹp, đừng quên ngủ sớm nhé.. 😴😴😴
+          </p>
+          <p id="kalimatbawah">
+            Mong cậu sẽ vui vẻ khi xem hết nhé 😜 !!!
+          </p>
+        </blockquote>
+      </div>
+
+      <!-- Pesan yang dikirim ke WhatsApp -->
+      <span id="pesanWA" class="sembunyi">Awww Good Night ️❤️</span>
+    </div>
+
+    <!-- Jangan Edit Bagian Ini -->
+    <script>
+      ftom = 0;
+      aksift = 0;
+      ftganti = 0;
+      flag = 1;
+      flagg = 1;
+      fungsi = 0;
+      fungsiAwal = 0;
+      fungsitimer = 0;
+      vketikhalo = halo.innerHTML;
+      halo.innerHTML = "";
+      var ahalo = 0,
+        vketikhalo;
+      pesanwhatsapp = pesanWA.innerHTML;
+      Content.style = "opacity:1;margin-top:16vh;";
+
+      async function menuju() {
+        window.location =
+          "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;
+      }
+
+      const body = document.querySelector("body");
+      const swalst = Swal.mixin({
+        timer: 3200,
+        allowOutsideClick: false,
+        showConfirmButton: false,
+        timerProgressBar: true,
+        imageHeight: 90,
+      });
+      const swals = Swal.mixin({
+        allowOutsideClick: false,
+        cancelButtonColor: "#FF0040",
+        imageWidth: 100,
+        imageHeight: 100,
+      });
+      audio = new Audio("" + linkmp3.src);
+
+      function createHeart() {
+        const heart = document.createElement("div");
+        heart.className = "fas fa-heart";
+        heart.style.left = Math.random() * 90 + "vw";
+        heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+        body.appendChild(heart);
+      }
+      setInterval(function name(params) {
+        var heartArr = document.querySelectorAll(".fa-heart");
+        if (heartArr.length > 100) {
+          heartArr[0].remove();
+        }
+      }, 100);
+    </script>
+
+    <script src="https://feeldreams.github.io/night/script.js"></script>
+  </body>
+</html>
