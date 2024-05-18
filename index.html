@@ -146,9 +146,11 @@
     var bq = document.getElementById('bq');
     stiker.onclick = function () {
       if (bq.innerHTML.includes('kalimat3')) {
+        stiker.src = 'https://feeldreams.github.io/bunga.gif';
         bq.innerHTML = '';
         bq.innerHTML = '<p id="kalimat">Tớ chỉ muốn nói..🤭</p><p id="kalimat2">Chúc cậu ngủ ngon và có một giấc mơ đẹp, đừng quên ngủ sớm 😴😴😴 để có một ngày mới vui tươi và cậu luôn luôn xinh đẹp nhé.. 😚😚😚</p><p id="kalimatbawah">Mong rằng Vân Anh xinh đẹp cảm thấy vui vẻ khi xem hết nhé 😜 !!!</p>';
       } else {
+        stiker.src = 'va.jpeg'
         bq.innerHTML = '';
         bq.innerHTML += '<p id="kalimat3"><span style="color: rgb(5, 55, 181);">Ngày 17-05-2024: </span>Mong cậu ấy sẽ vui vẻ khi xem hết những gì mình làm và hiểu được tấm lòng của mình.. 🥰🥰🥰</p>';
         bq.innerHTML += '<p id="kalimat4"><span style="color: rgb(5, 55, 181);">Ngày 18-05-2024: </span>Cậu ấy vẫn chưa xem chắc cậu ấy không thích mình rồi. Xin lỗi vì mình đã lỡ thích cậu, chắc mình đã làm phiền tới cuộc sống cậu nhiều lắm.. 😢😢😢</p>';
